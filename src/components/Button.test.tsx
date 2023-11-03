@@ -5,7 +5,7 @@ import Button from './Button';
 
 describe('Button', () => {
     it('renders title', async () => {
-        const { getByText } = render(<Button title="Title" onClick={() => null} />);
-        await waitFor(() => getByText('Title'))
+        const { getByText } = render(<Button title="Name" onClick={() => null} />);
+        await waitFor(() => getByText('Name'))
     })
 })
