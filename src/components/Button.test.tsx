@@ -1,6 +1,6 @@
 
-import { render, getByText, waitFor } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import { render, waitFor } from '@testing-library/react';
+import { describe, it } from 'vitest';
 import Button from './Button';
 
 describe('Button', () => {
