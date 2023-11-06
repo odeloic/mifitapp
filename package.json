@@ -8,7 +8,8 @@
     "test": "vitest run",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -26,11 +27,16 @@
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "husky": "^8.0.3",
     "jsdom": "^22.1.0",
+    "lint-staged": "^15.0.2",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vitest": "^0.34.6"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": ["eslint", "vitest run --changed HEAD~1"]
   }
 }
